@@ -1,0 +1,17 @@
+{
+  "name": "opensrs",
+  "displayName": "opensrs",
+  "expo": {
+    "name": "opensrs",
+    "slug": "opensrs",
+    "version": "1.0.0",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
