@@ -7,6 +7,7 @@ export default function Cards_frame(): React.ReactElement {
   return (
     <Layout style={{ flex: 1, justifyContent: 'flex-start', alignItems: 'center' }}>
 
+      <Text category='h1'> </Text>
       <View style={{ flexDirection: 'row' }}>
         <Button style={{ margin: '1em' }}>Add a Card</Button>
       </ View>
