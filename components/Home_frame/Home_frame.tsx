@@ -1,6 +1,10 @@
 import React from 'react'
 import { Layout, Text, Button, Menu, MenuGroup, MenuItem } from '@ui-kitten/components';
 
+interface IndexPath {
+    row: number;
+    section?: number;
+  }
 
 export default function Home_frame() {
     return (
