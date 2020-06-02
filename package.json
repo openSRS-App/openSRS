@@ -12,6 +12,7 @@
     "@expo/webpack-config": "^0.12.11",
     "@ui-kitten/components": "^5.0.0",
     "@ui-kitten/eva-icons": "^5.0.0",
+    "apollo-server-express": "^2.14.1",
     "eva-icons": "^1.1.3",
     "expo": "~37.0.3",
     "expo-updates": "~0.2.0",
