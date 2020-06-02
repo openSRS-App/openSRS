@@ -1,10 +1,9 @@
 import React from 'react'
 import { View } from 'react-native'
 import { Layout, Text, Button, CheckBox } from '@ui-kitten/components';
-// import { CheckBox } from 'react-native';
 
 
-export default function Deck_frame() {
+export default function Deck_frame(): React.ReactElement {
     return (
         <Layout style={{flex: 1, justifyContent: 'flex-start', alignItems: 'center'}}>
             <Button style={{alignSelf:"flex-start", margin: '1em'}}>Menu</Button>
