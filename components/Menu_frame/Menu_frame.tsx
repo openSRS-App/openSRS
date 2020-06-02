@@ -3,10 +3,10 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { BottomNavigation, BottomNavigationTab, Layout, Text } from '@ui-kitten/components';
 
-// import Account_frame from './components/Account_frame/Account_frame';
-// import Categories_frame from './components/Categories_frame/Categories_frame';
-// import Decks_frame from './components/Decks_frame/Decks_frame';
-// import Cards_frame from './components/Cards_frame/Cards_frame';
+// import Account_frame from './components/Menu_frame/Account_frame';
+// import Categories_frame from './components/Menu_frame/Categories_frame';
+// import Decks_frame from './components/Deck_frame/Decks_frame';
+// import Cards_frame from './components/Card_frame/Cards_frame';
 
 
 // Temporary placeholder for bottom navigation, more functionality
@@ -30,29 +30,7 @@ export default function Menu_frame() {
 
 // const { Navigator, Screen } = createBottomTabNavigator();
 
-// const AccountScreen = () => (
-//   <Layout style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-//     <Text category='h1'>ACCOUNT</Text>
-//   </Layout>
-// );
 
-// const CategoriesScreen = () => (
-//   <Layout style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-//     <Text category='h1'>CATEGORIES</Text>
-//   </Layout>
-// );
-
-// const DecksScreen = () => (
-//   <Layout style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-//     <Text category='h1'>DECKS</Text>
-//   </Layout>
-// );
-
-// const CardsScreen = () => (
-//   <Layout style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-//     <Text category='h1'>CARDS</Text>
-//   </Layout>
-// );
 
 // const BottomTabBar = ({ navigation, state }: any) => (
 //   <BottomNavigation
