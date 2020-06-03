@@ -41,6 +41,10 @@ buck-out/
 \.buckd/
 *.keystore
 
+# ETC
+package-lock.json
+yarn.lock
+
 # fastlane
 #
 # It is recommended to not store the screenshots in the git repo. Instead, use fastlane to re-generate the
