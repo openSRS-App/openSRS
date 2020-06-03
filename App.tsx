@@ -27,9 +27,9 @@ function App() {
       <ApplicationProvider {...eva} theme={eva.light}>
         <NavigationContainer>
           <Stack.Navigator>
-            <Stack.Screen name="Menu" component={Menu_frame} />
 
             <Stack.Screen name="Home" component={Home_frame} />
+            <Stack.Screen name="Menu" component={Menu_frame} />
             <Stack.Screen name="Card" component={Cards_frame} />
             <Stack.Screen name="Deck" component={Deck_frame} />
             <Stack.Screen name="FlashCard" component={FlashCard_frame} />
