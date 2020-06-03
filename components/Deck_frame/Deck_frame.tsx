@@ -3,10 +3,13 @@ import { View } from 'react-native'
 import { Layout, Text, Button, CheckBox } from '@ui-kitten/components';
 
 
-export default function Deck_frame(): React.ReactElement {
+export default function Deck_frame({ navigation }: any): React.ReactElement {
     return (
         <Layout style={{flex: 1, justifyContent: 'flex-start', alignItems: 'center'}}>
-            <Button style={{alignSelf:"flex-start", margin: '1em'}}>
+            <Button 
+            style={{alignSelf:"flex-start", margin: '1em'}} 
+            onPress={() => navigation.navigate('Menu')}
+            >
               Menu
               </Button>
 
