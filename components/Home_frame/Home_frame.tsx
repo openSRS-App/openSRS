@@ -13,7 +13,7 @@ export default function Home_frame({ navigation }: any) {
                 style={{ alignSelf: "flex-start", padding: 20 }}
             >
                 <Button
-                    title="This leads to the Menu Component"
+                    // title="This leads to the Menu Component"
                     onPress={() => navigation.navigate('Menu')}
                 >Menu</Button>
             </View>
@@ -29,7 +29,7 @@ export default function Home_frame({ navigation }: any) {
             </View>
             <View style={{ paddingBottom: 90 }}>
                 <Button
-                    title="Flash Card Component"
+                    // title="Flash Card Component"
                     onPress={() => navigation.navigate('FlashCard')}
                 >Study!</Button>
             </View>
