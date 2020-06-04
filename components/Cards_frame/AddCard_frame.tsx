@@ -24,9 +24,10 @@ function addCard() {
   })
     .then(res => res.json())
     .then(data => {
-      console.log("cards data: ", data)
+      addedCard = data.data.addCard;
+      console.log("Added: Front:", addedCard.front, "Back:", addedCard.back)
     })
-};
+}
 
   const [front, setFront] = React.useState<string>('');
   const [back, setBack] = React.useState<string>('');
