@@ -1,20 +1,45 @@
 import React from 'react';
+import { View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { BottomNavigation, BottomNavigationTab, Layout, Text } from '@ui-kitten/components';
+import { Icon, Layout, Menu, MenuItem, Button } from '@ui-kitten/components';
 
-export default function Menu_frame({ navigation }: any) {
+const StarIcon = (props: any) => (
+  <Icon {...props} name='star'/>
+);
 
-  const [selectedIndex, setSelectedIndex] = React.useState(0);
+const ForwardIcon = (props: any) => (
+  <Icon {...props} name='arrow-ios-forward'/>
+);
 
-  return (
-    <BottomNavigation
-      selectedIndex={selectedIndex}
-      onSelect={index => setSelectedIndex(index)}>
-      <BottomNavigationTab title='ACCOUNT' onPress={() => navigation.navigate('Account')} />
-      {/* <BottomNavigationTab title='CATEGORIES' onPress={() => navigation.navigate('Deck')}/> */}
-      <BottomNavigationTab title='DECKS' onPress={() => navigation.navigate('Deck')} />
-      <BottomNavigationTab title='CARDS' onPress={() => navigation.navigate('Card')} />
-    </BottomNavigation>
-  );
-};
+const Menu_frame = ({ navigation }: any) => (
+  <Layout>
+    <View>
+    <Button onPress={() => navigation.navigate('Home')}>
+      Home
+    </Button>
+      <Menu>
+        <MenuItem
+          title='Account'
+          accessoryLeft={StarIcon}
+          accessoryRight={ForwardIcon}
+          onPress={() => navigation.navigate('Account')}
+        />
+        <MenuItem
+          title='Decks'
+          accessoryLeft={StarIcon}
+          accessoryRight={ForwardIcon}
+          onPress={() => navigation.navigate('Deck')}
+        />
+        <MenuItem
+          title='Cards'
+          accessoryLeft={StarIcon}
+          accessoryRight={ForwardIcon}
+          onPress={() => navigation.navigate('Card')}
+        />
+      </Menu>
+    </View>
+  </Layout>
+);
+
+export default Menu_frame;
