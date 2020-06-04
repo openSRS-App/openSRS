@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import { View } from 'react-native';
 import { Layout, Text, Button, Menu, MenuGroup, MenuItem, Card, Icon } from '@ui-kitten/components';
 import FlashCardList from './FlashCardList'
@@ -16,8 +16,31 @@ const CheckIcon = (props: any) => (
 );
 
 
+export default function Home_frame({ navigation }: any,) {
+    
+let flashcards;
+useEffect(() => {
+    fetch("http://localhost:4000", {
+        method:"POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+            query:` query {
+                cards {
+                    front
+                    back
+                    id
+                }
+            }
+            `
+        })
+    })
+        .then(res => res.json())
+        .then(data => {
+            flashcards = data.data.cards
+            console.log(flashcards)
+        })
+    }, []);
 
-export default function Home_frame({ navigation }: any) {
     return (
         <Layout style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
             <View style={{ alignSelf: "flex-start" }}>
@@ -25,7 +48,7 @@ export default function Home_frame({ navigation }: any) {
             </View>
             <View style={{ flex: 1, alignSelf: 'center'}}>
                 <Card style={{ width: 420, height: 420 }}>
-                    <FlashCardList />
+                    <FlashCardList flashcards={flashcards}/>
                 </Card>
             </View>
             <View style={{ display: 'flex', flexDirection: 'row'}}>
