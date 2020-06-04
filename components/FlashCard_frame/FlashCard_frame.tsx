@@ -1,4 +1,5 @@
 import React from 'react'
+import { View } from 'react-native';
 import { Layout, Text, Button, Menu, MenuGroup, MenuItem, Card, Icon } from '@ui-kitten/components';
 import FlashCardList from './FlashCardList'
 
@@ -17,28 +18,25 @@ const CheckIcon = (props: any) => (
 export default function Home_frame({ navigation }: any) {
     return (
         <Layout style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-            <view style={{ alignSelf: "flex-start", padding: "10px" }}>
-                <Button
-                    title="Goes to Menu Component"
-                    onPress={() => navigation.navigate('Menu')}
-                >Menu</Button>
-            </view>
-            <view style={{ flex: 1, alignSelf: 'center', paddingTop: '200px', paddingBottom: '200px' }}>
-                <Card style={{ width: '420px', height: '420px' }}>
+            <View style={{ alignSelf: "flex-start" }}>
+                <Button onPress={() => navigation.navigate('Menu')}>Menu</Button>
+            </View>
+            <View style={{ flex: 1, alignSelf: 'center'}}>
+                <Card style={{ width: 420, height: 420 }}>
                     <FlashCardList />
                 </Card>
-            </view>
-            <view style={{ display: 'flex', flexDirection: 'row', padding: '120px' }}>
-                <view style={{ padding: '10px' }}>
+            </View>
+            <View style={{ display: 'flex', flexDirection: 'row'}}>
+                <View style={{  }}>
                     <Button accessoryLeft={CloseIcon} ></Button>
-                </view>
-                <view style={{ padding: '10px', paddingLeft: '100px', paddingRight: '100px' }}>
+                </View>
+                <View style={{ }}>
                     <Button accessoryLeft={FlipIcon}></Button>
-                </view>
-                <view style={{ padding: '10px' }}>
+                </View>
+                <View style={{ }}>
                     <Button accessoryLeft={CheckIcon}></Button>
-                </view>
-            </view>
+                </View>
+            </View>
         </Layout>
     )
 }
