@@ -1,8 +1,11 @@
-import React from 'react'
+import * as React from 'react'
 import { View } from 'react-native'
-import { Layout, Text, Button, CheckBox } from '@ui-kitten/components';
+import { Layout, Button, Input } from '@ui-kitten/components';
 
 
+
+export default function Cards_frame({ navigation }: any): React.ReactElement {
+ 
 let addedCard;
 
 function addCard() {
@@ -11,11 +14,10 @@ function addCard() {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
       query:` 
-        query {
-          cards {
+        mutation {
+          addCard (front: "${front}", back: "${back}") {
             front
             back
-            id
           }
         }`
     })
@@ -26,10 +28,9 @@ function addCard() {
     })
 };
 
-
-
-
-export default function Cards_frame({ navigation }: any): React.ReactElement {
+  const [front, setFront] = React.useState<string>('');
+  const [back, setBack] = React.useState<string>('');
+  
   return (
     <Layout style={{ flex: 1, justifyContent: 'flex-start', alignItems: 'center' }}>
       
@@ -40,7 +41,19 @@ export default function Cards_frame({ navigation }: any): React.ReactElement {
           Menu
         </Button>
       </View>
-
+      <Input 
+        label="Front of Card" 
+        placeholder="Question goes here.."
+        value={front}
+        onChangeText={setFront}
+        />
+      <Input 
+        label="Back of Card" 
+        placeholder="Place answer here.." 
+        value={back}
+        onChangeText={setBack}
+        />
+      <Button onPress={addCard}>Submit</Button>
     </Layout>
   )
 }
