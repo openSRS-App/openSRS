@@ -3,9 +3,13 @@ import { View } from 'react-native'
 import { Layout, Text, Button, CheckBox } from '@ui-kitten/components';
 
 
-export default function Cards_frame(): React.ReactElement {
+export default function Cards_frame({ navigation }: any): React.ReactElement {
   return (
     <Layout style={{ flex: 1, justifyContent: 'flex-start', alignItems: 'center' }}>
+      
+      <Button onPress={() => navigation.navigate('Menu')}>
+      Menu
+      </Button>
 
       <Text category='h1'> </Text>
       <View style={{ flexDirection: 'row' }}>
