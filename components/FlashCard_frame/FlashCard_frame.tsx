@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import React, {useEffect, useState} from 'react'
 import { View } from 'react-native';
 import { Layout, Text, Button, Menu, MenuGroup, MenuItem, Card, Icon } from '@ui-kitten/components';
 import FlashCardList from './FlashCardList'
@@ -17,29 +17,36 @@ const CheckIcon = (props: any) => (
 
 
 export default function Home_frame({ navigation }: any,) {
+const [flashcards, setFlashcards] = useState([]);
     
-let flashcards;
-useEffect(() => {
-    fetch("http://localhost:4000", {
-        method:"POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-            query:` query {
-                cards {
-                    front
-                    back
-                    id
+// let flashcards:any = [];
+useEffect( () => {
+    const getCards = async () => {
+    try {
+        console.log("we hit useEffect")
+        const data = await fetch("http://localhost:4000", {
+            method:"POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+                query:` query {
+                    cards {
+                        front
+                        back
+                        id
+                    }
                 }
-            }
-            `
+                `
+            })
         })
-    })
-        .then(res => res.json())
-        .then(data => {
-            flashcards = data.data.cards
-            console.log(flashcards)
-        })
-    }, []);
+        const flashcardsData = await data.json()
+        setFlashcards(flashcardsData.data.cards)
+        console.log(flashcardsData.data.cards)  
+    }
+    catch(err) {console.log(err)}
+    }
+    getCards()}, []) 
+    
+
 
     return (
         <Layout style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>

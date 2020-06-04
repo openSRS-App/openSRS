@@ -12,10 +12,11 @@ export default function FlashCard({flashcards}) {
         
         // <View className={`card ${flip ? 'flip' : ''}`} onClick={() => setFlip(!flip)} >
         <View>
-            <View style={front}>
-                {flashcards.front}
+            <View style={{display:'flex',justifyContent:'center',alignSelf:'center'}}>
+                <Text>{flashcards.front}</Text>
             </View>
             {/* <View style={back} >{flashcards.back}</View> */}
+
         </View>
     )
 }

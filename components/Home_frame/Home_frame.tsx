@@ -6,6 +6,7 @@ import { Layout, Text, Button, Menu, MenuGroup, MenuItem, Card } from '@ui-kitte
 
 
 export default function Home_frame({ navigation }: any) {
+
     return (
         <Layout style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
             <View
