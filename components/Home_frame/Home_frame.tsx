@@ -2,10 +2,6 @@ import React from 'react';
 import { View } from 'react-native';
 import { Layout, Text, Button, Menu, MenuGroup, MenuItem, Card } from '@ui-kitten/components';
 
-interface ButtonTitle {
-    title: string;
-}
-
 export default function Home_frame({ navigation }: any) {
     return (
         <Layout style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
@@ -13,7 +9,7 @@ export default function Home_frame({ navigation }: any) {
                 style={{ alignSelf: "flex-start", padding: 20 }}
             >
                 <Button
-                    title="This leads to the Menu Component"
+                    // title="This leads to the Menu Component"
                     onPress={() => navigation.navigate('Menu')}
                 >Menu</Button>
             </View>
@@ -29,7 +25,7 @@ export default function Home_frame({ navigation }: any) {
             </View>
             <View style={{ paddingBottom: 90 }}>
                 <Button
-                    title="Flash Card Component"
+                    // title="Flash Card Component"
                     onPress={() => navigation.navigate('FlashCard')}
                 >Study!</Button>
             </View>
