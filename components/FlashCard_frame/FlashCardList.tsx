@@ -1,9 +1,10 @@
 import React from 'react'
+import { View, Text } from 'react-native';
 
 export default function FlashCardList() {
     return (
-        <view style={{alignSelf:'center'}}>
-            F l a s h C a r d s
-        </view>
+        <View style={{alignSelf:'center'}}>
+            <Text>F l a s h C a r d s</Text>
+        </View>
     )
 }
