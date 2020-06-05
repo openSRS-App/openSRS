@@ -19,6 +19,7 @@ const CheckIcon = (props: any) => (
 export default function Home_frame({ navigation }: any, ) {
 const [flashcards, setFlashcards] = useState([]);
 const [flip, setFlip] = useState(true);
+const [next, setNext] = useState(false);
 // let flashcards:any = [];
 useEffect( () => {
     const getCards = async () => {
