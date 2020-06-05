@@ -3,7 +3,7 @@ import { View } from 'react-native'
 import { Layout, Text, Button, CheckBox } from '@ui-kitten/components';
 
 // ======================================
-// delete card API call to remove a card
+// delete card API call to server to remove a card
 // ======================================
 const deleteCard: any = () => {
   fetch("http://localhost:4000", {
@@ -12,7 +12,9 @@ const deleteCard: any = () => {
     body: JSON.stringify({
       query: `
       mutation {
-      
+        deleteCard(front: "${front}"){
+          front: front
+        }
       }
      `
     })
