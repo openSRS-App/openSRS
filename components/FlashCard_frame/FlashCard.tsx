@@ -1,8 +1,8 @@
 import React, {useState, useEffect, useRef} from 'react';
 import { View, Text } from 'react-native';
 
-export default function FlashCard({flashcards}) {
-    const [flip, setFlip] = useState(false);
+export default function FlashCard({flashcards, flip}) {
+
     let back;
     let front;
 
@@ -13,7 +13,7 @@ export default function FlashCard({flashcards}) {
         // <View className={`card ${flip ? 'flip' : ''}`} onClick={() => setFlip(!flip)} >
         <View>
             <View style={{display:'flex',justifyContent:'center',alignSelf:'center'}}>
-                <Text>{flashcards.front}</Text>
+                <Text>{flip ? flashcards.front : flashcards.back}</Text>
             </View>
             {/* <View style={back} >{flashcards.back}</View> */}
 
