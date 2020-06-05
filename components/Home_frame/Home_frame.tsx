@@ -3,31 +3,10 @@ import { View } from 'react-native';
 import { Layout, Text, Button, Menu, MenuGroup, MenuItem, Card } from '@ui-kitten/components';
 
 
-let cards;
-function queryFetch() {
-    fetch("http://localhost:4000", {
-        method:"POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-            query:` query {
-                cards {
-                    front
-                    back
-                    id
-                }
-            }
-            `
-        })
-    })
-        .then(res => res.json())
-        .then(data => {
-            cards = data.data.cards
-            console.log(data.data)
-        })
-    }
 
 
 export default function Home_frame({ navigation }: any) {
+
     return (
         <Layout style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
             <View
@@ -53,10 +32,6 @@ export default function Home_frame({ navigation }: any) {
                     // title="Flash Card Component"
                     onPress={() => navigation.navigate('FlashCard')}
                 >Study!</Button>
-                <Button
-                    // title="Flash Card Component"
-                    onPress={() => queryFetch()}
-                >Fetch cards</Button>
             </View>
         </Layout >
     )
