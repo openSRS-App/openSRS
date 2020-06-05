@@ -8,6 +8,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 // Importing Components
 import Home_frame from './components/Home_frame/Home_frame';
 import Cards_frame from './components/Cards_frame/Cards_frame';
+import AddCard_frame from './components/Cards_frame/AddCard_frame';
 import Deck_frame from './components/Deck_frame/Deck_frame';
 import FlashCard_frame from './components/FlashCard_frame/FlashCard_frame'
 import Login_frame from './components/Login_frame/Login_frame';
@@ -35,6 +36,7 @@ function App() {
             <Stack.Screen name="FlashCard" component={FlashCard_frame} />
             <Stack.Screen name="Login" component={Login_frame} />
             <Stack.Screen name="Account" component={Account_frame} />
+            <Stack.Screen name="AddCard" component={AddCard_frame} />
 
           </Stack.Navigator>
         </NavigationContainer>
