@@ -18,7 +18,7 @@ const CheckIcon = (props: any) => (
 
 export default function Home_frame({ navigation }: any, ) {
 const [flashcards, setFlashcards] = useState([]);
-const [flip, setFlip] = useState(false);
+const [flip, setFlip] = useState(true);
 // let flashcards:any = [];
 useEffect( () => {
     const getCards = async () => {
@@ -66,7 +66,7 @@ useEffect( () => {
                     <Button accessoryLeft={FlipIcon} onPress={() => setFlip(!flip)}></Button>
                 </View>
                 <View style={{ }}>
-                    <Button accessoryLeft={CheckIcon}></Button>
+                    <Button accessoryLeft={CheckIcon} onPress={() => flashcards.unshift()}></Button>
                 </View>
             </View>
         </Layout>
