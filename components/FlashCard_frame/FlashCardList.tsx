@@ -1,10 +1,15 @@
 import React from 'react'
-import { View, Text } from 'react-native';
+import { View } from 'react-native';
+import { Layout, Text, Button, Menu, MenuGroup, MenuItem, Card, Icon } from '@ui-kitten/components';
+import FlashCard from './FlashCard'
 
-export default function FlashCardList() {
+export default function FlashCardList({flashcards}) {
     return (
         <View style={{alignSelf:'center'}}>
-            <Text>F l a s h C a r d s</Text>
+            {console.log(flashcards)}
+            {flashcards.map((flashcards, Index) => {
+                return <Card style={{ width: 420, height: 420, zIndex:-{Index} }} key={Index}><FlashCard flashcards={flashcards} /></Card>
+            })}
         </View>
     )
 }
