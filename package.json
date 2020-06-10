@@ -11,7 +11,6 @@
     "@eva-design/eva": "^2.0.0",
     "@expo/vector-icons": "^10.2.0",
     "@expo/webpack-config": "^0.12.11",
-    "@react-native-community/google-signin": "^4.0.3",
     "@react-native-community/masked-view": "0.1.6",
     "@react-navigation/bottom-tabs": "^5.5.1",
     "@react-navigation/native": "^5.5.0",
