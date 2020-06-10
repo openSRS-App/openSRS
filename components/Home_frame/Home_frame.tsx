@@ -32,6 +32,10 @@ export default function Home_frame({ navigation }: any) {
                     // title="Flash Card Component"
                     onPress={() => navigation.navigate('FlashCard')}
                 >Study!</Button>
+                <Button
+                    // title="Flash Card Component"
+                    onPress={() => navigation.navigate('Login')}
+                >Login!</Button>
             </View>
         </Layout >
     )
