@@ -16,6 +16,7 @@ const CheckIcon = (props: any) => (
 );
 
 
+
 export default function Home_frame({ navigation }: any, ) {
 const [flashcards, setFlashcards] = useState([]);
 const [flip, setFlip] = useState(true);
@@ -61,13 +62,13 @@ useEffect( () => {
             </View>
             <View style={{ display: 'flex', flexDirection: 'row'}}>
                 <View style={{  }}>
-                    <Button accessoryLeft={CloseIcon} ></Button>
+                    <Button accessoryLeft={CloseIcon} onPress={() => {setFlashcards(flashcards.slice(1)); setFlip(true)}}></Button>
                 </View>
                 <View style={{ }}>
                     <Button accessoryLeft={FlipIcon} onPress={() => setFlip(!flip)}></Button>
                 </View>
                 <View style={{ }}>
-                    <Button accessoryLeft={CheckIcon} onPress={() => flashcards.unshift()}></Button>
+                    <Button accessoryLeft={CheckIcon} onPress={() => {setFlashcards(flashcards.slice(1)); setFlip(true)}}></Button>
                 </View>
             </View>
         </Layout>
