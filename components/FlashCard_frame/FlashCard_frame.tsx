@@ -62,7 +62,7 @@ useEffect( () => {
             </View>
             <View style={{ display: 'flex', flexDirection: 'row'}}>
                 <View style={{  }}>
-                    <Button accessoryLeft={CloseIcon} ></Button>
+                    <Button accessoryLeft={CloseIcon} onPress={() => {setFlashcards(flashcards.slice(1)); setFlip(true)}}></Button>
                 </View>
                 <View style={{ }}>
                     <Button accessoryLeft={FlipIcon} onPress={() => setFlip(!flip)}></Button>
