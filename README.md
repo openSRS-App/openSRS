@@ -1,2 +1,4 @@
 # openSRS
-the latest and greatest app for studying flash cards on the go
+An open source spaced repetition system for flashcards
+
+# Additional README details is currently under construction!
