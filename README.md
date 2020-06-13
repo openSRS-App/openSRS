@@ -1,4 +1,12 @@
-# openSRS
+## openSRS
 An open source spaced repetition system for flashcards
+![Preview](https://i.ibb.co/nbtGJHf/openSRS.png)
 
-## Additional README details are currently under construction!
+## How to install
+Currently under construction...
+
+## Quick Start
+Currently under construction...
+
+## Team
+Currently under construction...
