@@ -3,11 +3,20 @@ An open source spaced repetition system for flashcards
 
 ![Preview](https://i.ibb.co/nbtGJHf/openSRS.png)
 
-## How to install
-Currently under construction...
+### Getting Started
+1. `npm install -g expo-cli` to install the Expo CLI
+1. `yarn` to install dependencies
+1. `yarn web` to start Expo and view application
 
-## Quick Start
-Currently under construction...
+### How to Use
 
-## Team
-Currently under construction...
+
+### Authors
+
+Alexander Infante 
+
+Cherie Zhong
+
+Christian Hubbard
+
+Jimmy Phong
