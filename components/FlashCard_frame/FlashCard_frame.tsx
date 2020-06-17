@@ -68,7 +68,8 @@ useEffect( () => {
                     <Button accessoryLeft={FlipIcon} onPress={() => setFlip(!flip)}></Button>
                 </View>
                 <View style={{ }}>
-                    <Button accessoryLeft={CheckIcon} onPress={() => {setFlashcards(flashcards.slice(1)); setFlip(true)}}></Button>
+                    
+                    <Button accessoryLeft={CheckIcon} onPress={() => {setFlashcards(flashcards.slice(1)); setFlip(true)}}></Button> 
                 </View>
             </View>
         </Layout>
