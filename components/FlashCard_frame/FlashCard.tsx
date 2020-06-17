@@ -12,8 +12,8 @@ export default function FlashCard({flashcards, flip}) {
         
         // <View className={`card ${flip ? 'flip' : ''}`} onClick={() => setFlip(!flip)} >
         <View>
-            <View style={{display:'flex',justifyContent:'center',alignSelf:'center'}}>
-                <Text>{flip ? flashcards.front : flashcards.back}</Text>
+            <View style={{display:'flex',justifyContent:'center',alignSelf:'center', height:360}}>
+                <Text style={{display:'flex',justifyContent:'center',alignSelf:'center', fontSize:28 }}>{flip ? flashcards.front : flashcards.back}</Text>
             </View>
             {/* <View style={back} >{flashcards.back}</View> */}
 
