@@ -56,20 +56,54 @@ useEffect( () => {
                 <Button onPress={() => navigation.navigate('Menu')}>Menu</Button>
             </View> */}
             <View style={{ flex: 1, alignSelf: 'center', padding:'2em'}}>
-                <Card style={{ width: 420, height: 420 }}>
+                <Card style={{ width: 420, height: 420, shadowColor: "#000",
+                                    shadowOffset: {
+                                        width: 0,
+                                        height: 2,
+                                    },
+                                    shadowOpacity: 0.23,
+                                    shadowRadius: 2.62,
+                            
+                                    elevation: 4 }}>
                     <FlashCardList flashcards={flashcards} flip={flip}/>
                 </Card>
             </View>
             <View style={{ display: 'flex', flexDirection: 'row', padding:'8em'}}>
-                <View style={{ padding:'1em' }}>
-                    <Button accessoryLeft={CloseIcon} onPress={() => {setFlashcards(flashcards.slice(1)); setFlip(true)}}></Button>
+                <View style={{ padding:'1em'}}>
+                    <Button style={{ shadowColor: "#000",
+                                    shadowOffset: {
+                                        width: 0,
+                                        height: 2,
+                                    },
+                                    shadowOpacity: 0.23,
+                                    shadowRadius: 2.62,
+                            
+                                    elevation: 4}} 
+                                    accessoryLeft={CloseIcon} onPress={() => {setFlashcards(flashcards.slice(1)); setFlip(true)}}></Button>
                 </View>
-                <View style={{padding:'1em' }}>
-                    <Button accessoryLeft={FlipIcon} onPress={() => setFlip(!flip)}></Button>
+                <View style={{padding:'1em'}}>
+                    <Button style={{ shadowColor: "#000",
+                                    shadowOffset: {
+                                        width: 0,
+                                        height: 2,
+                                    },
+                                    shadowOpacity: 0.23,
+                                    shadowRadius: 2.62,
+                            
+                                    elevation: 4}} accessoryLeft={FlipIcon} onPress={() => setFlip(!flip)}></Button>
                 </View>
-                <View style={{padding:'1em' }}>
+                <View style={{padding:'1em'}}>
                     
-                    <Button accessoryLeft={CheckIcon} onPress={() => {setFlashcards(flashcards.slice(1)); setFlip(true)}}></Button> 
+                    <Button style={{ shadowColor: "#000",
+                                    shadowOffset: {
+                                        width: 0,
+                                        height: 2,
+                                    },
+                                    shadowOpacity: 0.23,
+                                    shadowRadius: 2.62,
+                            
+                                    elevation: 4}} 
+                                    accessoryLeft={CheckIcon} onPress={() => {setFlashcards(flashcards.slice(1)); setFlip(true)}}></Button> 
                 </View>
             </View>
         </Layout>
