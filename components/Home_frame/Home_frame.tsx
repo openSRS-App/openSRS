@@ -9,14 +9,14 @@ export default function Home_frame({ navigation }: any) {
 
     return (
         <Layout style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-            <View
+            {/* <View
                 style={{ alignSelf: "flex-start", padding: 20 }}
             >
                 <Button
                     // title="This leads to the Menu Component"
                     onPress={() => navigation.navigate('Menu')}
                 >Menu</Button>
-            </View>
+            </View> */}
             <View
                 style={{ flex: 1, alignSelf: 'center', paddingTop: 100, paddingBottom: 100 }}
             >
