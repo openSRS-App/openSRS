@@ -52,22 +52,22 @@ useEffect( () => {
 
     return (
         <Layout style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-            <View style={{ alignSelf: "flex-start" }}>
+            {/* <View style={{ alignSelf: "flex-start" }}>
                 <Button onPress={() => navigation.navigate('Menu')}>Menu</Button>
-            </View>
-            <View style={{ flex: 1, alignSelf: 'center'}}>
+            </View> */}
+            <View style={{ flex: 1, alignSelf: 'center', padding:'2em'}}>
                 <Card style={{ width: 420, height: 420 }}>
                     <FlashCardList flashcards={flashcards} flip={flip}/>
                 </Card>
             </View>
-            <View style={{ display: 'flex', flexDirection: 'row'}}>
-                <View style={{  }}>
+            <View style={{ display: 'flex', flexDirection: 'row', padding:'8em'}}>
+                <View style={{ padding:'1em' }}>
                     <Button accessoryLeft={CloseIcon} onPress={() => {setFlashcards(flashcards.slice(1)); setFlip(true)}}></Button>
                 </View>
-                <View style={{ }}>
+                <View style={{padding:'1em' }}>
                     <Button accessoryLeft={FlipIcon} onPress={() => setFlip(!flip)}></Button>
                 </View>
-                <View style={{ }}>
+                <View style={{padding:'1em' }}>
                     
                     <Button accessoryLeft={CheckIcon} onPress={() => {setFlashcards(flashcards.slice(1)); setFlip(true)}}></Button> 
                 </View>
