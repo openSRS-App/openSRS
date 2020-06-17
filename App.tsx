@@ -31,18 +31,18 @@ function App({ navigation }: any) {
 
             <Stack.Screen name="Home" component={Home_frame} options={({navigation}) => ({headerRight: () => (
               <Text
-                style={{padding:'1em', fontSize:18,fontWeight:'500'}}
+                style={{padding:'1em', fontSize:18,fontWeight:'500', color:'black'}}
                 onPress={() => navigation.navigate('Card')}>Menu</Text>
                 ),
               })}
               />
             <Stack.Screen name="Menu" component={Menu_frame} />
-            <Stack.Screen name="Card" component={Cards_frame} />
+            <Stack.Screen name="Card" options={{title:' Home'}} component={Cards_frame} />
             <Stack.Screen name="Deck" component={Deck_frame} />
             <Stack.Screen name="FlashCard" component={FlashCard_frame} />
             <Stack.Screen name="Login" component={Login_frame} />
             <Stack.Screen name="Account" component={Account_frame} />
-            <Stack.Screen name="AddCard" component={AddCard_frame} />
+            <Stack.Screen name="AddCard" options={{title:'Menu'}} component={AddCard_frame} />
 
           </Stack.Navigator>
         </NavigationContainer>
