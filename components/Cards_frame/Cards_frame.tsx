@@ -30,13 +30,13 @@ export default function Cards_frame({ navigation }: any): React.ReactElement {
     <Layout style={{ flex: 1, justifyContent: 'flex-start', alignItems: 'center' }}>
 
       
-      <View style={{ alignSelf: "flex-start", padding: 20 }}>
+      {/* <View style={{ alignSelf: "flex-start", padding: 20 }}>
         <Button
         // title="This leads to the Menu Component"
           onPress={() => navigation.navigate('Menu')}>
           Menu
         </Button>
-      </View>
+      </View> */}
 
       <Text category='h1'> </Text>
       <View style={{ flexDirection: 'row' }}>

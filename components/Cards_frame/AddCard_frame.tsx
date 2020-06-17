@@ -35,26 +35,30 @@ function addCard() {
   return (
     <Layout style={{ flex: 1, justifyContent: 'flex-start', alignItems: 'center' }}>
       
-      <View style={{ alignSelf: "flex-start", padding: 20 }}>
+      {/* <View style={{ alignSelf: "flex-start", padding: 20 }}>
         <Button
         // title="This leads to the Menu Component"
           onPress={() => navigation.navigate('Menu')}>
           Menu
         </Button>
+      </View> */}
+      <View style={{display:'flex',flexDirection:'column',justifyContent:'center', padding:'4em'}}>
+        <Input 
+          label="Front of Card" 
+          placeholder="Question goes here.."
+          value={front}
+          onChangeText={setFront}
+          style={{padding:'1em'}}
+          />
+        <Input 
+          label="Back of Card" 
+          placeholder="Place answer here.." 
+          value={back}
+          onChangeText={setBack}
+          style={{padding:'1em'}}
+          />
       </View>
-      <Input 
-        label="Front of Card" 
-        placeholder="Question goes here.."
-        value={front}
-        onChangeText={setFront}
-        />
-      <Input 
-        label="Back of Card" 
-        placeholder="Place answer here.." 
-        value={back}
-        onChangeText={setBack}
-        />
-      <Button onPress={addCard}>Submit</Button>
+        <Button style={{padding:'1em'}} onPress={addCard}>Submit</Button>
     </Layout>
   )
 }
