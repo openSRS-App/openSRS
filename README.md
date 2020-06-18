@@ -1,10 +1,3 @@
-## openSRS
-An open source spaced repetition system for flashcards
-
-![Preview](https://i.ibb.co/nbtGJHf/openSRS.png)
-
-======
-
 # openSRS
 
 An open source spaced repetition system for flashcards
