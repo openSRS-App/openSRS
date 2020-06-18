@@ -16,7 +16,6 @@ const CheckIcon = (props: any) => (
 );
 
 
-
 export default function Home_frame({ navigation }: any, ) {
 const [flashcards, setFlashcards] = useState([]);
 const [flip, setFlip] = useState(true);
