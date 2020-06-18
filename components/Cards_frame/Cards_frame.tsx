@@ -84,6 +84,9 @@ export default function Cards_frame({ navigation }: any): React.ReactElement {
     </View>
   );
   
+  const renderEditItemIcon = (props: any) => (
+    <Icon name='checkmark-circle-outline' {...props} onPress={() => editCard()}/>
+  );
 
   const renderItem = ({ item }) => (
     <ListItem
@@ -108,23 +111,29 @@ export default function Cards_frame({ navigation }: any): React.ReactElement {
 
       <Modal visible={visible}>
         <Card disabled={true} style={{flex: 1, justifyContent: 'center', alignItems: 'center', height: 420, width: 420}}>
-          <Card onPress={() => setFrontShow(!frontShow)}>
+          <Card>
             {frontShow ? 
-            <Text>{selected.front}</Text>
+            <Text
+              onPress={() => setFrontShow(!frontShow)}>
+            {selected.front}</Text>
             :
             <Input
               label="Front of Card"
               value={selected.front}
+              accessoryRight={renderEditItemIcon}
             />
             }
           </Card>
-          <Card onPress={() => setBackShow(!backShow)}>
+          <Card>
           {backShow ? 
-            <Text>{selected.back}</Text>
+            <Text
+              onPress={() => setBackShow(!backShow)}>
+            {selected.back}</Text>
             :
             <Input 
               label="Back of Card"
               value={selected.back}
+              accessoryRight={renderEditItemIcon}
             />
             }
           </Card>
