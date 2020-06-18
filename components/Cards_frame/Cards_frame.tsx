@@ -10,29 +10,31 @@ export default function Cards_frame({ navigation }: any): React.ReactElement {
   const [frontShow, setFrontShow] = React.useState(true);
   const [backShow, setBackShow] = React.useState(true);
 
-  useEffect( () => {
-    const getCards = async() => {
-      try {
-        const data = await fetch("http://localhost:4000", {
-          method: "POST",
-          headers: { "Content-Type" : "application/json" },
-          body: JSON.stringify({
-            query: `
-              query {
-                cards {
-                  front
-                  back
-                }
-              }`
-          })
+  const getCards = async () => {
+    try {
+      const data = await fetch("http://localhost:4000", {
+        method: "POST",
+        headers: { "Content-Type" : "application/json" },
+        body: JSON.stringify({
+          query: `
+            query {
+              cards {
+                front
+                back
+              }
+            }`
         })
-        const flashcardsData = await data.json()
-        setFlashcards(flashcardsData.data.cards)
-      }
-      catch (err) {
-        console.log("Error in getCards: ", err)
-      }
+      })
+      const flashcardsData = await data.json()
+      setFlashcards(flashcardsData.data.cards)
     }
+    catch (err) {
+      console.log("Error in getCards: ", err)
+    }
+  }
+
+  useEffect( () => {
+
     getCards()}, [])
   
   // ======================================
@@ -54,7 +56,10 @@ export default function Cards_frame({ navigation }: any): React.ReactElement {
       })
     })
       .then(res => res.json())
-      .then(data => console.log("Deleted Card:", data))
+      .then(data => {
+        getCards();
+        console.log("Deleted Card:", data)
+      })
   }
 
   const editCard: any = (selected) => {
