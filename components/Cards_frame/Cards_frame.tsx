@@ -1,7 +1,11 @@
 import React, {useEffect, useState} from 'react'
-import { View } from 'react-native'
+import { View, ScrollView } from 'react-native'
 import { Layout, Text, Button, Icon, List, ListItem } from '@ui-kitten/components';
 
+
+const TrashIcon = (props: any) => (
+  <Icon name='trash-2-outline' {...props} />
+);
 
 // ======================================
 // delete card API call to server to remove a card
@@ -55,7 +59,11 @@ useEffect( () => {
   getCards()}, [])
   
   const renderItemIcon = (props) => (
-    <Icon {...props} name='person'/>
+    <View style={{display:'flex', flexDirection:'row'}}>
+      <Button>Hello</Button>
+      <Icon name='trash-2-outline' {...props} onClick={() => console.log("what up")} />
+      {/* <Button accessoryLeft={TrashIcon} style={{backgroundColor: 'transparent'}}></Button> */}
+    </View>
   );
   
   const renderItem = ({ item }) => (
@@ -69,7 +77,6 @@ useEffect( () => {
   return (
     <Layout style={{ flex: 1, justifyContent: 'flex-start', alignItems: 'center' }}>
 
-      
       {/* <View style={{ alignSelf: "flex-start", padding: 20 }}>
         <Button
         // title="This leads to the Menu Component"
@@ -78,25 +85,26 @@ useEffect( () => {
         </Button>
       </View> */}
 
-      <Text category='h1'> </Text>
-      <View style={{ flexDirection: 'row' }}>
-        <Button 
-          style={{ margin: '5%' }} 
-          onPress={() => navigation.navigate('AddCard')}>
-            Add a Card
-        </Button>
-      </ View>
-      <View style={{ flexDirection: 'row' }}>
-        <Button
+      <Text category='h1' style={{padding:'1em'}}>Your Cards:</Text>
+      {/* <View style={{ flexDirection: 'row' }}> */}
+        {/* <Button
           onPress={() => deleteCard()} // upon clicking the button, trigger fn to delete card
           style={{ margin: '1em' }}
-        >Delete a Card</Button>
-      </ View>
-      <List
-      data={flashcards}
-      renderItem={renderItem}
-    />
-
+          >Delete a Card</Button>
+        </ View> */}
+      <View style={{maxHeight:'32em', padding:'1em'}}>
+        <List
+        data={flashcards}
+        renderItem={renderItem}
+        />
+      </View>
+        <View style={{ flexDirection: 'row' }}>
+          <Button 
+            style={{ margin: '5%', padding:'1em' }} 
+            onPress={() => navigation.navigate('AddCard')}>
+              Add a Card
+          </Button>
+        </ View>
     </Layout>
   )
 }
