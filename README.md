@@ -27,6 +27,6 @@ Please read [CONTRIBUTING.md](https://www.contributor-covenant.org/version/1/4/c
 
 ## Authors
 
-Jimmy Phong, Brian Bui, Alan Lee, Tristel Wastell
+Christian Hubbard, Jimmy Phong, Cherie Zhong, Alex Infante
 
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
