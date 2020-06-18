@@ -59,10 +59,9 @@ useEffect( () => {
   getCards()}, [])
   
   const renderItemIcon = (props) => (
-    <View style={{display:'flex', flexDirection:'row'}}>
-      <Button>Hello</Button>
+    <View style={{display:'flex', flexDirection:'row', alignItems:'center', justifyContent:'flex-end'}}>
+      <Icon name='edit-outline' {...props} onClick={() => console.log("what up")} />
       <Icon name='trash-2-outline' {...props} onClick={() => console.log("what up")} />
-      {/* <Button accessoryLeft={TrashIcon} style={{backgroundColor: 'transparent'}}></Button> */}
     </View>
   );
   
@@ -76,14 +75,6 @@ useEffect( () => {
 
   return (
     <Layout style={{ flex: 1, justifyContent: 'flex-start', alignItems: 'center' }}>
-
-      {/* <View style={{ alignSelf: "flex-start", padding: 20 }}>
-        <Button
-        // title="This leads to the Menu Component"
-          onPress={() => navigation.navigate('Menu')}>
-          Menu
-        </Button>
-      </View> */}
 
       <Text category='h1' style={{padding:'1em'}}>Your Cards:</Text>
       {/* <View style={{ flexDirection: 'row' }}> */}
