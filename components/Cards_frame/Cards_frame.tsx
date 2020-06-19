@@ -98,11 +98,19 @@ export default function Cards_frame({ navigation }: any): React.ReactElement {
   );
 
   return (
-    <Layout style={{ flex: 1, justifyContent: 'flex-start', alignItems: 'center' }}>
+    <Layout style={{ flex: 1, justifyContent: 'flex-start', alignItems: 'center',backgroundColor:'white-ish' }}>
 
-      <Text category='h1' style={{padding:'1em'}}>Your Cards:</Text>
+      <Text category='h1' style={{padding:'3%'}}>Your Cards:</Text>
 
-      <View style={{maxHeight:'32em', padding:'1em'}}>
+      <View style={{maxHeight:'35%', padding:'0%',shadowColor: "#000",
+                                    shadowOffset: {
+                                        width: 0,
+                                        height: 2,
+                                    },
+                                    shadowOpacity: 0.23,
+                                    shadowRadius: 2.62,
+                            
+                                    elevation: 4 }}>
         <List
         data={flashcards}
         renderItem={renderItem}
@@ -138,7 +146,7 @@ export default function Cards_frame({ navigation }: any): React.ReactElement {
             }
           </Card>
         </Card>
-        <Button style={{ margin: '5%', padding:'4em', shadowColor: "#000",
+        <Button style={{ margin: '5%', padding:'4%', shadowColor: "#000",
             shadowOffset: {
               width: 0,
               height: 2,
@@ -151,9 +159,9 @@ export default function Cards_frame({ navigation }: any): React.ReactElement {
         </Button>
       </Modal>
 
-      <View style={{ flexDirection: 'row' }}>
+      <View style={{ flexDirection: 'row', padding:'5%' }}>
         <Button 
-          style={{ margin: '5%', padding:'4em', shadowColor: "#000",
+          style={{ shadowColor: "#000",
             shadowOffset: {
               width: 0,
               height: 2,
