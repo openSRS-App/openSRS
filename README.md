@@ -1,5 +1,5 @@
 # OpenSRS
-<img src='/public/demo.gif'>
+<img src='/public/opensrs.gif'>
 
 ### What is OpenSRS
 OpenSRS is an open source spaced repetition system for flashcards
