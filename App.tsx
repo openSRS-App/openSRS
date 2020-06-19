@@ -31,7 +31,7 @@ function App({ navigation }: any) {
 
             <Stack.Screen name="Home" component={Home_frame} options={({navigation}) => ({headerRight: () => (
               <Text
-                style={{padding:'1em', fontSize:18,fontWeight:'500', color:'black'}}
+                style={{padding:'25%', fontSize:18,fontWeight:'500', color:'black'}}
                 onPress={() => navigation.navigate('Card')}>Menu</Text>
                 ),
               })}

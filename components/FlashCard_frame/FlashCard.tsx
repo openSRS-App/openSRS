@@ -1,30 +1,33 @@
-import React, {useState, useEffect, useRef} from 'react';
-import { View, Text } from 'react-native';
+import React, {useRef} from 'react';
+import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import CardFlip from 'react-native-card-flip';
+import { transform } from '@babel/core';
 
-export default function FlashCard({flashcards, flip}) {
-
-    let back;
-    let front;
-
+const FlashCard = ({flashcards, flip}) => {
 
 
     return (
-        
+        // <View >
+        //     <CardFlip>
+        //         <TouchableOpacity onPress={() => } ><Text style={{display:'flex',justifyContent:'center',alignSelf:'center', fontSize:28 }}>{flashcards.front}</Text></TouchableOpacity>
+        //         <TouchableOpacity  onPress={() => console.log(CardFlip)} ><Text style={{display:'flex',justifyContent:'center',alignSelf:'center', fontSize:28 }}>{flashcards.back}</Text></TouchableOpacity>
+        //     </CardFlip>
+        // </View>
         // <View className={`card ${flip ? 'flip' : ''}`} onClick={() => setFlip(!flip)} >
-        <View>
+        // <View style={`styles.card ${flip ? '.front' : '.back'}`}>
             <View style={{display:'flex',justifyContent:'center',alignSelf:'center', height:360}}>
                 <Text style={{display:'flex',justifyContent:'center',alignSelf:'center', fontSize:28 }}>{flip ? flashcards.front : flashcards.back}</Text>
             </View>
-            {/* <View style={back} >{flashcards.back}</View> */}
 
-        </View>
+        // </View>
     )
 }
+export default FlashCard;
 
 // let styles = {
-//     .card.flip{
-//         --rotate-y:180deg;
-//     }
+//     // .card.flip{
+//     //     --rotate-y:180deg;
+//     // }
     
 //     .card .front {
 //         left: 0;
