@@ -2,12 +2,12 @@
 
 An open source spaced repetition system for flashcards
 
-![Preview](https://i.ibb.co/nbtGJHf/openSRS.png)
+<img src='/public/demo.gif'>
 
 ## Getting Started
 
-To get started on your local machine, 
-* git clone
+To get started on your local machine:
+* Set up your database connection
 * `yarn` in your terminal to install all dependencies
 * `yarn web` to open up local development environment
 
