@@ -7,6 +7,8 @@ import { Layout, Button, Input } from '@ui-kitten/components';
 export default function Cards_frame({ navigation }: any): React.ReactElement {
  
 let addedCard;
+const [front, setFront] = React.useState<string>('');
+const [back, setBack] = React.useState<string>('');
 
 function addCard() {
   fetch("http://localhost:4000", {
@@ -24,24 +26,12 @@ function addCard() {
   })
     .then(res => res.json())
     .then(data => {
-      addedCard = data.data.addCard;
-      console.log("Added: Front:", addedCard.front, "Back:", addedCard.back)
+      console.log("addedCard response: ", data)
     })
 }
-
-  const [front, setFront] = React.useState<string>('');
-  const [back, setBack] = React.useState<string>('');
   
   return (
     <Layout style={{ flex: 1, justifyContent: 'flex-start', alignItems: 'center' }}>
-      
-      {/* <View style={{ alignSelf: "flex-start", padding: 20 }}>
-        <Button
-        // title="This leads to the Menu Component"
-          onPress={() => navigation.navigate('Menu')}>
-          Menu
-        </Button>
-      </View> */}
       <View style={{display:'flex',flexDirection:'column',justifyContent:'center', padding:'4em'}}>
         <Input 
           label="Front of Card" 
