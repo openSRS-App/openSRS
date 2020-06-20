@@ -3,10 +3,11 @@ import { View } from 'react-native'
 import { Layout, Button, Input, Card } from '@ui-kitten/components';
 
 
-
 export default function Cards_frame({ navigation }: any): React.ReactElement {
  
 let addedCard;
+const [front, setFront] = React.useState<string>('');
+const [back, setBack] = React.useState<string>('');
 
 function addCard() {
   fetch("http://localhost:4000", {
@@ -24,45 +25,41 @@ function addCard() {
   })
     .then(res => res.json())
     .then(data => {
-      addedCard = data.data.addCard;
-      console.log("Added: Front:", addedCard.front, "Back:", addedCard.back)
+      console.log("addedCard response: ", data)
     })
 }
-
-  const [front, setFront] = React.useState<string>('');
-  const [back, setBack] = React.useState<string>('');
   
   return (
     <Layout style={{ flex: 1, justifyContent: 'flex-start', alignItems: 'center', backgroundColor:'white-ish' }}>
-      <View style={{display:'flex', paddingTop:'20%'}}>
-        <Card style={{shadowColor: "#000",
-                      shadowOffset: {
-                          width: 0,
-                          height: 2,
-                      },
-                      shadowOpacity: 0.23,
-                      shadowRadius: 2.62,
-              
-                      elevation: 4 }}>
-          <View style={{display:'flex',flexDirection:'column', alignSelf:'center', justifyContent:'center', padding:'4em'}}>
+      <View style={{  display: 'flex', paddingTop:'20'}}>
+        <Card style={{
+          shadowColor: "#000",
+          shadowOffset: {
+            width: 0,
+            height: 2,
+          },
+          shadowOpacity: 0.23,
+          shadowRadius: 2.62,
+          elevation: 4 }}>
+          <View style={{ display:'flex', flexDirection:'column', alignSelf:'center', justifyContent:'center', padding:'4' }}>
             <Input 
               label="Front of Card" 
               placeholder="Question goes here.."
               value={front}
               onChangeText={setFront}
-              style={{padding:'1em'}}
+              style={{ padding:'1' }}
               />
             <Input 
               label="Back of Card" 
               placeholder="Place answer here.." 
               value={back}
               onChangeText={setBack}
-              style={{padding:'1em'}}
+              style={{padding: '1'}}
               />
               
           </View>
           
-            <Button style={{padding:'1em'}} onPress={addCard}>Submit</Button>
+            <Button style={{ padding:'1' }} onPress={addCard}>Submit</Button>
         </Card>
         </View>
     </Layout>
