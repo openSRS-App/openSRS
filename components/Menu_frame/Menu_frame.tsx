@@ -15,9 +15,6 @@ const ForwardIcon = (props: any) => (
 const Menu_frame = ({ navigation }: any) => (
   <Layout>
     <View>
-    {/* <Button onPress={() => navigation.navigate('Home')}>
-      Home
-    </Button> */}
       <Menu>
         <MenuItem
           title='Account'
