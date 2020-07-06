@@ -17,7 +17,7 @@ export default function FlashCardList({flashcards, flip}) {
         elevation: 4}}>
             {console.log(flashcards)}
             {flashcards.map((flashcards, Index) => {
-                return <Card style={{ width: 420, height: 420, zIndex:-{Index}, shadowColor: "#000",
+                return <Card style={{ width: 420, height: 420, zIndex:-{Index}, shadowColor: "#000", backgroundColor: flip ? "#ffffff" : "#dbe4f0" ,
                 shadowOffset: {
                     width: 0,
                     height: 2,
